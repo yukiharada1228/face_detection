@@ -8,6 +8,7 @@
  近くに写った顔から順に，指定した数まで検出します．
  
 # Requirement
+* Python 3.8.10
 * openvino 2021.4.2
 * openvino-dev[pytorch] 2021.4.2
 
