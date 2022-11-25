@@ -15,10 +15,10 @@ class FaceDetect:
         # モデルの読み込み
         ie_core = IECore()
         network = ie_core.read_network(model_path + '.xml',
-                                       model_path + '.bin',)
+                                       model_path + '.bin')
         self.exec_network = ie_core.load_network(network=network,
                                             device_name='CPU',
-                                            num_requests=0,)
+                                            num_requests=0)
         self.input_name = next(iter(network.input_info))
         self.input_size = network.input_info[self.input_name].input_data.shape
         self.output_name = next(iter(network.outputs))
@@ -44,7 +44,7 @@ class FaceDetect:
                 xmax = min(1, data[5])
                 ymax = min(1, data[6])
                 area = (xmax - xmin) * (ymax - ymin)
-                face = [xmin, ymin, xmax, ymax, area,]
+                face = [xmin, ymin, xmax, ymax, area]
                 faces.append(face)
         faces.sort(key=lambda face: face[-1], reverse=True)
         self.faces = faces[:num]
