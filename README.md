@@ -2,7 +2,7 @@
  OpenVINOによる顔検出
 
 # DEMO
-!(img/demo1.png)
+![screenshot](img/demo1.png)
  
 # Features
  近く写った顔から順に，指定した数まで検出します．
