@@ -72,9 +72,19 @@ class FaceDetect:
 
 if __name__ == '__main__':
 
+    import sys
+
     import config
 
     
+    if len(sys.argv) == 3:
+        num, conf = int(sys.argv[1]), float(sys.argv[2])
+    elif len(sys.argv) == 2:
+        num, conf = int(sys.argv[1]), 0.8
+    else:
+        num, conf = 1, 0.8
+    logger.debug({'num': num,
+                  'conf': conf})
     capture = config.capture
     face_detect = config.face_detect
 
@@ -89,7 +99,7 @@ if __name__ == '__main__':
         logger.debug({'frame.shape': frame.shape})
 
         # 顔検出
-        face_detect.detect(frame, conf=0.8, num=1)
+        face_detect.detect(frame, conf=conf, num=num)
         output_frame = face_detect.draw()
 
         # 画像の表示
