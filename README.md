@@ -3,6 +3,7 @@
 
 # DEMO
 <img src="img/demo1.png" width="320">
+
 # Features
  近く写った顔から順に，指定した数まで検出します．
  
