@@ -85,7 +85,7 @@ if __name__ == '__main__':
         num, conf = 1, 0.8
     logger.debug({'num': num,
                   'conf': conf})
-    capture = config.capture
+    capture = cv.VideoCapture(config.CAMERA_PORT)
     face_detect = config.face_detect
 
     while capture.isOpened():
