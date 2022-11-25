@@ -1,5 +1,5 @@
 # face_detection
- Face Detection with OpenVINO
+ Face Detection with OpenVINO.
 
 # DEMO
 <img src="img/demo1.png" width="320">
