@@ -31,7 +31,7 @@ class FaceDetect:
                       'output_size': output_size})
 
     # 顔検出
-    def detect(self, image, conf=0.8, num=1):
+    def detect(self, image, num=1, conf=0.8):
         _, _, h, w = self.input_size
         input_image = cv.resize(image, (h, w)).transpose((2, 0, 1))[np.newaxis]
         input_data = {self.input_name: input_image}
